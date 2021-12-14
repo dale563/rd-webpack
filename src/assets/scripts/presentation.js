@@ -1,3 +1,4 @@
+import 'bootstrap-icons/font/bootstrap-icons.scss';
 console.log('Script exclusif à la page présentation');
 
 // Change the size of our presentation

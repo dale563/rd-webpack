@@ -9,7 +9,7 @@
                         <link rel="stylesheet" href="reveal/reveal.css">
                         <link rel="stylesheet" href="reveal/theme/black.css">
                         <link rel="stylesheet" href="reveal/plugin/highlight/monokai.css">
-	<script defer src="main-bundle.js"></script><script defer src="presentation-bundle.js"></script><link href="main.css" rel="stylesheet"></head>
+	<script defer src="main-bundle.js"></script><script defer src="presentation-bundle.js"></script><link href="main.css" rel="stylesheet"><link href="presentation.css" rel="stylesheet"></head>
 	<body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
@@ -31,8 +31,172 @@
     </header>
 		<main class="reveal">
         <div class="slides">
-          <section>Slide 1</section>
-          <section>Slide 2</section>
+          <section>
+            <section>
+              <p>Avant tout, vous pouvez faire un clone de la présention</p>
+              <pre>
+                git clone https://github.com/dale563/rd-webpack.git
+              </pre>
+              <p>Ensuite entrez dans le dossier et lancer l'installation:</p>
+              <pre>
+                npm install
+              </pre>
+              <p>Finalement, lancer le serveur de développement :</p>
+              <pre>
+                npm run dev
+              </pre>
+              <p>Vous devriez ainsi avoir la même présentation que moi.</p>
+            </section>
+            <section>
+              <img src="./assets/images/logo-on-dark-bg.png" alt="logo de webpack">
+            </section>
+            <section>
+              <h3>Pourquoi utiliser Webpack :</h3>
+              <blockquote>[Pour] faciliter le développement et la gestion de sites et d'applications web modernes.</blockquote>
+              <ul>
+                <li>Créer un environnement de travail</li>
+                <li>C'est un outil puissant et malléable</li>
+                <li>Il est bien documenté et très utilisé</li>
+              </ul>
+            </section>
+            <section>
+              <h3>Webpack est un module bundler</h3>
+              <img src="./assets/images/module-bundler.png" alt="logo de webpack">
+            </section>
+            <section data-markdown>
+              <textarea data-template>
+              ### Ordre du jour
+              1. Histoire, fonctionnement, nomenclature, fonctionnement, pros et défi de webpack;
+                  1. Présentations de quelques loaders et de plugins;
+              2. On entre dans le code - la structure du fichier de configuration;
+                  1. Exploration de la première structure (branche premiere);
+                  2. Analyse du fichier de config de la première structure(branche seconde);
+              3. Changement de branche - exploration de la seconde structure de fichiers;
+                  1. Analyse des fichiers de configuration de la seconde branche;
+            </textarea>
+            </section>
+            <section>
+              <h3>Son histoire</h3>
+            </section>
+            <section>
+              <h3>Son fonctionnement</h3>
+              Input -> Transformation -> Output
+            </section>
+            <section>
+              <h3>Termes importants</h3>
+              Module, Loaders, Plugins, Chunk
+            </section>
+            <section data-markdown>
+              <textarea data-template>
+              ### Et à partir de là?
+               Constitué à 80% de plugins et il existes beaucoup, BEAUCOUP, de loaders et de Plugins. 
+               Il à donc été pensé pour être personnalisable.
+               Input -> Transformation -> Output
+               Modules -> Loaders+Plugins -> Chunks/bundles +++
+              </textarea>
+            </section>
+            <section>
+              <h3>Qu'est-ce qu'on fait avec ça?</h3>
+               On se demande avec quoi part, comment on veut travailler entre les deux (environnement dev) et avec quoi on veut finir(dist/public).
+               Puis on construit notre environnement sur mesure avec webpack et ses super avantage.
+            </section>
+            <section data-markdown>
+              <textarea data-template>
+              ### Pas si évident
+              1. Fonctionnement harmonieux des modules ensembles
+                  1. Webpack évolue et change de fonctionnement (et de compatibilité);
+                  2. Il est au centre des problèmes d'interaction entre les modules;
+                  3. Finalement, il est à cheval sur l'environnement Node.js;
+              2. Choix des loaders et des plugins
+                  1. Webpack est d'abord javascipt
+            </textarea>
+            </section>
+            <section data-markdown>
+              <textarea data-template>
+              ### Une vrai merveille une fois qu'on le comprends même une petit peu
+              1. Beaucoup de documentation;
+              2. C'est un module bundler qui est bien rodé et entrenu;
+              3. On peut faire VRAIMENT BEAUCOUP de chose avec;
+              4. Va chercher les dépendances automatiquement;
+              5. Permet aussi d'optimiser la performance et le temps de chargement;
+              6. Il est plaisant à utiliser;
+            </textarea>
+            </section>
+            <section data-markdown>
+              <textarea data-template>
+                ### Sélection de Loaders et Plugins
+                <table class="table table-dark table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Nom</th>
+                      <th scope="col">Utilité</th>
+                      <th scope="col">Ressource</th> 
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">babel-loader</th>
+                      <td>compatibilité</td>
+                      <td><a href="https://github.com/babel/babel-loader"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-link-45deg"></i></a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </textarea>
+            </section>
+          </section>
+          <section>
+            <section>
+              <section>
+                <h3>Entrons dans le code</h3>
+              </section>
+            </section>
+          </section>
+          <section>
+            <section>
+              <section>
+                <h3>Entrons dans la deuxième branche</h3>
+              </section>
+            </section>
+          </section>
+          
+          <section data-markdown>
+            <textarea data-template>
+              ### Bibliographie:
+              https://webpack.js.org/
+              https://programmer.help/blogs/introduction-to-the-most-complete-webpack-in-history.html
+              https://en.wikipedia.org/wiki/Webpack
+              https://www.youtube.com/watch?v=9c3dBhvtt6o
+              https://www.youtube.com/watch?v=MpGLUVbqoYQ&t=29s
+              https://www.youtube.com/watch?v=TOb1c39m64A&t=1606s
+              https://www.youtube.com/watch?v=GU-2T7k9NfI&t=733s
+              https://www.youtube.com/watch?v=jiY-bAhe7oU&t=640s
+            </textarea>
+          </section>
         </div>
 		</main>
     <footer>
