@@ -4,13 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title><%= htmlWebpackPlugin.options.title %></title>
-    <%= htmlWebpackPlugin.options.headTags %>
+		<title>Présentation</title>
 	</head>
 	<body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
-          <a class="navbar-brand" href="#"><h1><%= htmlWebpackPlugin.options.title %></h1></a>
+          <a class="navbar-brand" href="#"><h1>Présentation</h1></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -302,21 +301,85 @@
           </section>
           </section>
           <section>
-            <section>
+            
               <section>
-                <h3>Entrons dans le code - branche premiere</h3>
-
+                <h3>Entrons dans le code - branche config01</h3>
+                <pre><code data-trim>
+                  git checkout config01
+                </code></pre>
               </section>
-            </section>
-          </section>
+              <section>
+                <h3>Regardons d'abord le fichier json</h3>
+                <pre><code data-trim data-line-numbers="8-9|15-32|35">
+                  {
+                    "name": "rd-webpack",
+                    "version": "1.0.0",
+                    "description": "",
+                    "private": true,
+                    "main": "./src/scripts/main.js",
+                    "scripts": {
+                      "dev": "webpack-dev-server --open",
+                      "prod": "webpack --mode=production"
+                    },
+                    "keywords": [],
+                    "author": "DALE LIMOGES",
+                    "license": "MIT",
+                    "devDependencies": {
+                      "@babel/core": "^7.16.0",
+                      "@babel/preset-env": "^7.16.4",
+                      "babel-loader": "^8.2.3",
+                      "copy-webpack-plugin": "^10.0.0",
+                      "css-loader": "^6.5.1",
+                      "exports-loader": "^3.1.0",
+                      "file-loader": "^6.2.0",
+                      "html-loader": "^3.0.1",
+                      "html-webpack-plugin": "^5.5.0",
+                      "imagemin-webp-webpack-plugin": "^3.3.6",
+                      "mini-css-extract-plugin": "^2.4.5",
+                      "node-sass": "^6.0.1",
+                      "sass-loader": "^12.3.0",
+                      "style-loader": "^3.3.1",
+                      "webpack": "^5.64.4",
+                      "webpack-cli": "^4.9.1",
+                      "webpack-dev-server": "^4.6.0",
+                      "webpack-merge": "^5.8.0"
+                    },
+                    "dependencies": {
+                      "bootstrap": "^4.5.0",
+                      "bootstrap-icons": "^1.7.2",
+                      "highlight.js": "^11.3.1",
+                      "jquery": "^3.5.2",
+                      "popper.js": "^1.16.1-lts",
+                      "reveal.js": "^4.2.0"
+                    }
+                  }
+                </code></pre>
+              </section>
+              <section>
+                <h3>Puis le fichier de configuration Webpack</h3>
+                <pre>
+                  <code data-trim>
+                    Voir le fichier webpack.config.js
+
+                    Et regardons la structure de dossier en examinant le fichier
+                  </code>
+                </pre>
+              </section> 
+              <section>
+                <h3>Il y a d'autre manière de faire ... plus recommandée</h3>
+                <pre>
+                  <code data-trim>
+                    git checkout config02
+                  </code>
+                </pre>
+              </section> 
+          </section> 
           <section>
             <section>
-              <section>
-                <h3>Entrons dans la deuxième branche</h3>
-              </section>
+              <h3>Seconde configuration</h3>
+              <p>Aller sur la branche config02 pour accéder la cette section de la présentation</p>
             </section>
-          </section>
-          
+          </section>       
           <section data-markdown>
             <textarea data-template>
               ### Bibliographie:
@@ -335,6 +398,5 @@
     <footer>
       
     </footer>
-		<%= htmlWebpackPlugin.options.bodyTags %>
 	</body>
 </html>

@@ -1,0 +1,109 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Présentation</title><script defer="defer" src="assets/scripts/main-5f12449ebc5d3a625076.bundle.js"></script><script defer="defer" src="assets/scripts/presentation-9ea039677e6fdbae4f61.bundle.js"></script><link href="assets/styles/main-6015cf64a2f17574613b.css" rel="stylesheet"><link href="assets/styles/presentation-0ffecffe6ec273f9df5c.css" rel="stylesheet"></head><body><header><nav class="navbar navbar-expand-lg navbar-light bg-light px-3"><a class="navbar-brand" href="#"><h1>Présentation</h1></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarNavDropdown"><ul class="navbar-nav"><li class="nav-item active"><a class="nav-link" href="#">Webpack(1/2)<span class="sr-only"></span></a></li><li class="nav-item"><a class="nav-link" href="page-en-construction.html">Page en construction</a></li></ul></div></nav></header><main class="reveal"><div class="slides"><section><section><p>Avant tout, vous pouvez faire un clone de la présention</p><pre>
+                <code data-trim>
+                  git clone https://github.com/dale563/rd-webpack.git
+                </code>
+              </pre><p>Ensuite entrez dans le dossier et lancer l'installation:</p><pre>
+                <code data-trim>
+                  npm install
+                </code>
+              </pre><p>Finalement, lancer le serveur de développement :</p><pre>
+                <code data-trim>
+                  npm run dev
+                </code>
+              </pre><p>Vous devriez ainsi avoir la même présentation que moi.</p></section><section><img src="assets/images/logo-on-dark-bg.png" alt="logo de webpack"></section><section><h3>Pourquoi utiliser Webpack :</h3><blockquote>[Pour] faciliter le développement et la gestion de sites et d'applications web modernes.</blockquote><ul><li>Créer un environnement de travail</li><li>C'est un outil puissant et malléable</li><li>Il est bien documenté et très utilisé</li></ul></section><section><h3>Webpack est un module bundler</h3><img src="assets/images/module-bundler.png" alt="logo de webpack"></section><section data-markdown><textarea data-template>
+              ### Ordre du jour
+              1. Histoire, fonctionnement, nomenclature, fonctionnement, pros et défi de webpack;
+                  1. Présentations de quelques loaders et de plugins;
+              2. On entre dans le code - la structure du fichier de configuration;
+                  1. Exploration de la première structure (branche premiere);
+                  2. Analyse du fichier de config de la première structure(branche seconde);
+              3. Changement de branche - exploration de la seconde structure de fichiers;
+                  1. Analyse des fichiers de configuration de la seconde branche;
+            </textarea></section><section><h3>Son histoire</h3></section><section><h3>Son fonctionnement</h3>Input -> Transformation -> Output</section><section><h3>Termes importants</h3>Module, Loaders, Plugins, Chunk</section><section data-markdown><textarea data-template>
+              ### Et à partir de là?
+               Constitué à 80% de plugins et il existes beaucoup, BEAUCOUP, de loaders et de Plugins. 
+               Il à donc été pensé pour être personnalisable.
+               Input -> Transformation -> Output
+               Modules -> Loaders+Plugins -> Chunks/bundles +++
+              </textarea></section><section><h3>Qu'est-ce qu'on fait avec ça?</h3>On se demande avec quoi part, comment on veut travailler entre les deux (environnement dev) et avec quoi on veut finir(dist/public). Puis on construit notre environnement sur mesure avec webpack et ses super avantage.</section><section data-markdown><textarea data-template>
+              ### Pas si évident
+              1. Fonctionnement harmonieux des modules ensembles
+                  1. Webpack évolue et change de fonctionnement (et de compatibilité);
+                  2. Il est au centre des problèmes d'interaction entre les modules;
+                  3. Finalement, il est à cheval sur l'environnement Node.js;
+              2. Choix des loaders et des plugins
+                  1. Webpack est d'abord javascipt
+            </textarea></section><section data-markdown><textarea data-template>
+              ### Une vrai merveille une fois qu'on le comprends même une petit peu
+              1. Beaucoup de documentation;
+              2. C'est un module bundler qui est bien rodé et entrenu;
+              3. On peut faire VRAIMENT BEAUCOUP de chose avec;
+              4. Va chercher les dépendances automatiquement;
+              5. Permet aussi d'optimiser la performance et le temps de chargement;
+              6. Il est plaisant à utiliser;
+            </textarea></section><section><h3>Sélection de Modules, loaders et plugins</h3></section><section><h3>Selection - Webpack et Bable</h3><table class="table table-dark table-hover"><thead><tr><th scope="col">Nom</th><th scope="col">Utilité</th><th scope="col">Ressource</th></tr></thead><tbody><tr><th scope="row">webpack</th><td>Packter toute pour le web</td><td><a href="https://github.com/babel/babel-loader"><i class="bi bi-github"></i></a><a href="https://webpack.js.org/"><i class="bi bi-link-45deg"></i></a></td></tr><tr><th scope="row">webpack-cli</th><td>Communiquer en ligne de commande avec webpack</td><td><a href="https://github.com/babel/babel-loader"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-link-45deg"></i></a></td></tr><tr><th scope="row">webpack-dev-server</th><td>Rouler un environnement de développement</td><td><a href="https://github.com/babel/babel-loader"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-link-45deg"></i></a></td></tr></tbody></table></section><section><h3>Sélection - Webpack et Babel</h3><table class="table table-dark table-hover"><thead><tr><th scope="col">Nom</th><th scope="col">Utilité</th><th scope="col">Ressource</th></tr></thead><tbody><tr><th scope="row">webpack-merge</th><td>Joindre plusieurs fichiers de configuraitons ensemble</td><td><a href="https://github.com/babel/babel-loader"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-link-45deg"></i></a></td></tr><tr><th scope="row">babel-loader</th><td>compatibilité</td><td><a href="https://www.npmjs.com/package/babel-loader">npm</a><a href="https://github.com/babel/babel-loader"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-link-45deg"></i></a></td></tr></tbody></table></section><section><h3>Sélection - Styles</h3><table class="table table-dark table-hover"><thead><tr><th scope="col">Nom</th><th scope="col">Utilité</th><th scope="col">Ressource</th></tr></thead><tbody><tr><th scope="row">node-sass</th><td>Requis pour le sass-loader</td><td><a href="https://www.npmjs.com/package/node-sass">npm</a><a href="https://github.com/sass/node-sass"><i class="bi bi-github"></i></a></td></tr><tr><th scope="row">sass-loader</th><td>Converti le sass en css</td><td><a href="https://www.npmjs.com/package/sass-loader"></a><a href="https://github.com/webpack-contrib/sass-loader"><i class="bi bi-github"></i></a></td></tr><tr><th scope="row">css-loader</th><td>Lire le CSS</td><td><a href="https://www.npmjs.com/package/css-loader">npm</a><a href="https://github.com/webpack-contrib/css-loader"><i class="bi bi-github"></i></a><a href="https://webpack.js.org/loaders/css-loader/"><i class="bi bi-link-45deg"></i></a></td></tr><tr><th scope="row">mini-css-extract-plugin</th><td>Créer et gérer des fichiers CSS</td><td><a href="https://webpack.js.org/plugins/mini-css-extract-plugin/">npm</a><a href="https://github.com/webpack-contrib/mini-css-extract-plugin"><i class="bi bi-github"></i></a><a href="https://webpack.js.org/plugins/mini-css-extract-plugin/"><i class="bi bi-link-45deg"></i></a></td></tr></tbody></table></section><section><h3>Sélection - HTML et autre</h3><table class="table table-dark table-hover"><thead><tr><th scope="col">Nom</th><th scope="col">Utilité</th><th scope="col">Ressource</th></tr></thead><tbody><tr><th scope="row">html-loader</th><td>Lire le code HTML</td><td><a href="https://www.npmjs.com/package/html-loader">npm</a><a href="https://github.com/webpack-contrib/html-loader"><i class="bi bi-github"></i></a><a href="https://webpack.js.org/loaders/html-loader/"><i class="bi bi-link-45deg"></i></a></td></tr><tr><th scope="row">html-webpack-plugin</th><td>Interagir avec le code html - plus d'option que html-loader</td><td><a href="https://www.npmjs.com/package/html-webpack-plugin">npm</a><a href="https://github.com/jantimon/html-webpack-plugin"><i class="bi bi-github"></i></a><a href="https://webpack.js.org/plugins/html-webpack-plugin/"><i class="bi bi-link-45deg"></i></a></td></tr><tr><th scope="row">copy-webpack-plugin</th><td>Copiers les éléments qui contourne le "dependencies graph de Webpack"</td><td><a href="https://github.com/webpack-contrib/copy-webpack-plugin"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-link-45deg"></i></a></td></tr></tbody></table></section><section><h3>Sélection - Aller plus loin</h3><table class="table table-dark table-hover"><thead><tr><th scope="col">Nom</th><th scope="col">Utilité</th><th scope="col">Ressource</th></tr></thead><tbody><tr><th scope="row">export-loader</th><td>Exporter les modules en les important...</td><td><a href="https://github.com/babel/babel-loader"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-link-45deg"></i></a></td></tr><tr><th scope="row">imagemin-webp-webpack-plugin</th><td>Convertir les images en format webp</td><td><a href="https://www.npmjs.com/package/imagemin-webp-webpack-plugin">npm</a></td></tr><tr><th scope="row">purge-css-webpack-plugin</th><td>Enlever le CSS non utilisé</td><td><a href="https://www.npmjs.com/package/purgecss-webpack-plugin">npm</a></td></tr></tbody></table></section><section><h3>Sélection - Aller plus loin</h3><table class="table table-dark table-hover"><thead><tr><th scope="col">Nom</th><th scope="col">Utilité</th><th scope="col">Ressource</th></tr></thead><tbody><tr><th scope="row">webpack-easy-seo</th><td>Améliorer le SEO</td><td><a href="https://www.npmjs.com/package/webpack-easy-seo">npm</a></td></tr><tr><th scope="row">Communauté webpack-contrib</th><td>Plusieurs repositories supportés par la communauté</td><td><a href="https://github.com/webpack-contrib"><i class="bi bi-github"></i></a></td></tr></tbody></table></section></section><section><section><h3>Entrons dans le code - branche config01</h3><pre><code data-trim>
+                  git checkout config01
+                </code></pre></section><section><h3>Regardons d'abord le fichier json</h3><pre><code data-trim data-line-numbers="8-9|15-32|35">
+                  {
+                    "name": "rd-webpack",
+                    "version": "1.0.0",
+                    "description": "",
+                    "private": true,
+                    "main": "./src/scripts/main.js",
+                    "scripts": {
+                      "dev": "webpack-dev-server --open",
+                      "prod": "webpack --mode=production"
+                    },
+                    "keywords": [],
+                    "author": "DALE LIMOGES",
+                    "license": "MIT",
+                    "devDependencies": {
+                      "@babel/core": "^7.16.0",
+                      "@babel/preset-env": "^7.16.4",
+                      "babel-loader": "^8.2.3",
+                      "copy-webpack-plugin": "^10.0.0",
+                      "css-loader": "^6.5.1",
+                      "exports-loader": "^3.1.0",
+                      "file-loader": "^6.2.0",
+                      "html-loader": "^3.0.1",
+                      "html-webpack-plugin": "^5.5.0",
+                      "imagemin-webp-webpack-plugin": "^3.3.6",
+                      "mini-css-extract-plugin": "^2.4.5",
+                      "node-sass": "^6.0.1",
+                      "sass-loader": "^12.3.0",
+                      "style-loader": "^3.3.1",
+                      "webpack": "^5.64.4",
+                      "webpack-cli": "^4.9.1",
+                      "webpack-dev-server": "^4.6.0",
+                      "webpack-merge": "^5.8.0"
+                    },
+                    "dependencies": {
+                      "bootstrap": "^4.5.0",
+                      "bootstrap-icons": "^1.7.2",
+                      "highlight.js": "^11.3.1",
+                      "jquery": "^3.5.2",
+                      "popper.js": "^1.16.1-lts",
+                      "reveal.js": "^4.2.0"
+                    }
+                  }
+                </code></pre></section><section><h3>Puis le fichier de configuration Webpack</h3><pre>
+                  <code data-trim>
+                    Voir le fichier webpack.config.js
+
+                    Et regardons la structure de dossier en examinant le fichier
+                  </code>
+                </pre></section><section><h3>Il y a d'autre manière de faire ... plus recommandée</h3><pre>
+                  <code data-trim>
+                    git checkout config02
+                  </code>
+                </pre></section></section><section><section><h3>Seconde configuration</h3><p>Aller sur la branche config02 pour accéder la cette section de la présentation</p></section></section><section data-markdown><textarea data-template>
+              ### Bibliographie:
+              https://webpack.js.org/
+              https://programmer.help/blogs/introduction-to-the-most-complete-webpack-in-history.html
+              https://en.wikipedia.org/wiki/Webpack
+              https://www.youtube.com/watch?v=9c3dBhvtt6o
+              https://www.youtube.com/watch?v=MpGLUVbqoYQ&t=29s
+              https://www.youtube.com/watch?v=TOb1c39m64A&t=1606s
+              https://www.youtube.com/watch?v=GU-2T7k9NfI&t=733s
+              https://www.youtube.com/watch?v=jiY-bAhe7oU&t=640s
+            </textarea></section></div></main><footer></footer></body></html>
