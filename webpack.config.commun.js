@@ -9,6 +9,7 @@ module.exports = {
         presentation: path.resolve(__dirname, 'src/assets/scripts/presentation.js'),
         pageconstruction: path.resolve(__dirname, 'src/assets/scripts/pageconstruction.js'),
       },
+      
     output: {
         path: path.resolve(__dirname, 'public'),
         assetModuleFilename: 'assets/[name][ext]',

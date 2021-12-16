@@ -9,14 +9,14 @@
 	<body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
-          <a class="navbar-brand" href="#"><h1>Présentation</h1></a>
+          <a class="navbar-brand" href="javascript:;"><h1>Présentation</h1></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Webpack(1/2)<span class="sr-only"></span></a>
+                <a class="nav-link" href="javascript:;">Webpack(1/2)<span class="sr-only"></span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="page-en-construction.html">Page en construction</a>
@@ -28,6 +28,9 @@
 		<main class="reveal">
         <div class="slides">
           <section>
+            <section>
+              <img src="./assets/images/logo-on-dark-bg.png" alt="logo de webpack">
+            </section>
             <section>
               <p>Avant tout, vous pouvez faire un clone de la présention</p>
               <pre>
@@ -48,9 +51,6 @@
                 </code>
               </pre>
               <p>Vous devriez ainsi avoir la même présentation que moi.</p>
-            </section>
-            <section>
-              <img src="./assets/images/logo-on-dark-bg.png" alt="logo de webpack">
             </section>
             <section>
               <h3>Pourquoi utiliser Webpack :</h3>
@@ -378,19 +378,253 @@
             <section>
               <h3>Seconde configuration</h3>
               <p>Aller sur la branche config02 pour accéder la cette section de la présentation</p>
+              <pre><code data-trim>
+                git checkout config02
+                npm run dev
+              </code></pre>
+            </section>
+            <section>
+              <h3>Regardons d'abord le fichier json (config02)</h3>
+              <pre><code data-trim data-line-numbers="8-9|28">
+                {
+                  "name": "rd-webpack",
+                  "version": "1.0.0",
+                  "description": "",
+                  "private": true,
+                  "main": "./src/scripts/main.js",
+                  "scripts": {
+                    "dev": "webpack-dev-server --config webpack.config.dev.js",
+                    "prod": "webpack --config webpack.config.prod.js"
+                  },
+                  "keywords": [],
+                  "author": "DALE LIMOGES",
+                  "license": "MIT",
+                  "devDependencies": {
+                    "@babel/core": "^7.16.0",
+                    "@babel/preset-env": "^7.16.4",
+                    "babel-loader": "^8.2.3",
+                    "css-loader": "^6.5.1",
+                    "html-loader": "^3.0.1",
+                    "html-webpack-plugin": "^5.5.0",
+                    "imagemin-webp-webpack-plugin": "^3.3.6",
+                    "mini-css-extract-plugin": "^2.4.5",
+                    "node-sass": "^6.0.1",
+                    "sass-loader": "^12.3.0",
+                    "webpack": "^5.64.4",
+                    "webpack-cli": "^4.9.1",
+                    "webpack-dev-server": "^4.6.0",
+                    "webpack-merge": "^5.8.0"
+                  },
+                  "dependencies": {
+                    "bootstrap": "^4.5.0",
+                    "bootstrap-icons": "^1.7.2",
+                    "highlight.js": "^11.3.1",
+                    "jquery": "^3.5.2",
+                    "popper.js": "^1.16.1-lts",
+                    "reveal.js": "^4.2.0"
+                  }
+                }
+              </code></pre>
+            </section>
+            <section>
+              <h3>Puis les fichiers de configuration Webpack</h3>
+              <ul>
+                <li>webpack.config.commun.js</li>
+                <li>webpack.config.dev.js</li>
+                <li>webpack.config.prod.js</li>
+              </ul>
+            </section> 
+            <section>
+              <ul>
+                <li>webpack.config.prod.js</li>
+              </ul>
+              <pre>
+                <code data-trim data-line-numbers="2-3|5|7|12|17|20">
+                  const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+                  const common = require('./webpack.config.commun');
+                  const { merge } = require('webpack-merge');
+
+                  module.exports = merge(common, {
+
+                      mode: 'production',
+
+                      plugins: [
+                          new MiniCssExtractPlugin({
+                              linkType: 'text/css',
+                              filename: 'assets/styles/[name]-[contenthash].css'
+                          })
+                      ],
+
+                      output: {
+                          filename: 'assets/scripts/[name]-[contenthash].bundle.js',
+                      },
+
+                  });
+                </code>
+              </pre>
+            </section>
+            <section>
+              <ul>
+                <li>webpack.config.dev.js</li>
+              </ul>
+              <pre>
+                <code data-trim data-line-numbers="1-2|5|7|10|16|22-25|27">
+                  const { merge } = require('webpack-merge');
+                  const common = require('./webpack.config.commun');
+                  const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+                  module.exports = merge(common, {
+
+                      mode: 'development',
+
+                      output: {
+                          filename: 'assets/scripts/[name]-bundle.js',
+                      },
+
+                      plugins: [
+                          new MiniCssExtractPlugin({
+                              linkType: 'text/css',
+                              filename: 'assets/styles/[name].css'
+                          })
+                      ],
+
+                      devtool: 'inline-source-map',
+
+                      devServer: {
+                          open: true,
+                          hot: true,
+                      },
+
+                  });
+                </code>
+              </pre>
+            </section> 
+            <section>
+              <ul>
+                <li>webpack.config.commun.js</li>
+              </ul>
+              <pre>
+                <code data-trim data-line-numbers="1-2|5|7-11|13-17|19-30|23,28|32|33|34-43|44-47|48-54|55-61|62-65">
+                  const path = require('path');
+                  const HtmlWebPackPlugin = require( 'html-webpack-plugin' );
+                  const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+                  module.exports = {
+
+                      entry: {
+                          main: path.resolve(__dirname, 'src/assets/scripts/main.js'),
+                          presentation: path.resolve(__dirname, 'src/assets/scripts/presentation.js'),
+                          pageconstruction: path.resolve(__dirname, 'src/assets/scripts/pageconstruction.js'),
+                        },
+                        
+                      output: {
+                          path: path.resolve(__dirname, 'public'),
+                          assetModuleFilename: 'assets/[name][ext]',
+                          clean: true,
+                      },
+
+                      plugins: [
+                          new HtmlWebPackPlugin({
+                              filename: 'index.html',
+                              template: path.resolve(__dirname, 'src/index.html'),
+                              excludeChunks: [ 'pageconstruction' ]
+                          }),
+                          new HtmlWebPackPlugin({
+                              filename: 'page-en-construction.html', 
+                              template: path.resolve(__dirname, 'src/page-en-construction.html'), 
+                              chunks: [ 'main', 'pageconstruction' ]
+                          }), 
+                      ],
+
+                      module: {
+                          rules: [
+                              {
+                                  test: /\.js$/,
+                                  exclude: /node-modules/,
+                                  use: {
+                                      loader: 'babel-loader',
+                                      options: {
+                                        presets: ['@babel/preset-env'],
+                                      },
+                                    },
+                              },
+                              {
+                                  test: /\.html$/,
+                                  loader: 'html-loader',
+                              },
+                              {
+                                  test: /\.(svg|ico|png|webp|jpg|gif|jpeg)$/, 
+                                  type: 'asset/resource',
+                                  generator: {
+                                      filename: 'assets/images/[name][ext]'
+                                  } 
+                              },
+                              {
+                                  test: /\.(woff|woff2|ttf|eot)$/, 
+                                  type: 'asset/resource',
+                                  generator: {
+                                      filename: 'assets/fonts/[name][ext]'
+                                  } 
+                              },
+                              {
+                                  test: /\.(scss|css)$/,
+                                  use: [MiniCssExtractPlugin.loader,'css-loader', 'sass-loader'],
+                              },
+                          ]
+                      },
+                      
+                      
+                  };
+                </code>
+              </pre>
+            </section>
+            <section>
+              <h3>Analyse et retour</h3>
+              <ul>
+                <li>Pas évident de trouver l'information fonctionnelle sur webpack</li>
+                <li>De base une structure js ou jsx</li>
+                <li>
+                  <ul>
+                    <li>Tout ne fonctionne pas avec tout parfaitement</li>
+                    <li>copy-webpack-plugin et le "dependencies graph"</li>
+                    <li>html-loader et html-webpack-plugin</li>
+                  </ul>
+                </li>
+                <li>config01 vs config02</li>
+              </ul>
+            </section>
+            <section>
+              <h3>Quoi s'attendre pour la seconde présentation</h3>
+              <ul>
+                <li>Chunk (ex:vendor)</li>
+                <li>Optimisation
+                  <ul>
+                    <li>Tansformer les images en webp</li>
+                    <li>Purger le CSS</li>
+                    <li>Lancer les scripts en différer</li>
+                  </ul>
+                </li>
+                <li>PHP/React</li>
+                <li>Wordpress? - "cross environnement"</li>
+                <li>Des suggestions?</li>
+              </ul>
+            </section>
+            <section>
+              <h3>FIN</h3>
+              <p>Questions, commentaires injures?</p>
             </section>
           </section>       
           <section data-markdown>
             <textarea data-template>
               ### Bibliographie:
-              https://webpack.js.org/
-              https://programmer.help/blogs/introduction-to-the-most-complete-webpack-in-history.html
-              https://en.wikipedia.org/wiki/Webpack
-              https://www.youtube.com/watch?v=9c3dBhvtt6o
-              https://www.youtube.com/watch?v=MpGLUVbqoYQ&t=29s
-              https://www.youtube.com/watch?v=TOb1c39m64A&t=1606s
-              https://www.youtube.com/watch?v=GU-2T7k9NfI&t=733s
-              https://www.youtube.com/watch?v=jiY-bAhe7oU&t=640s
+              * https://webpack.js.org/
+              * https://programmer.help/blogs/introduction-to-the-most-complete-webpack-in-history.html
+              * https://en.wikipedia.org/wiki/Webpack
+              * https://www.youtube.com/watch?v=9c3dBhvtt6o
+              * https://www.youtube.com/watch?v=MpGLUVbqoYQ&t=29s
+              * https://www.youtube.com/watch?v=TOb1c39m64A&t=1606s
+              * https://www.youtube.com/watch?v=GU-2T7k9NfI&t=733s
+              * https://www.youtube.com/watch?v=jiY-bAhe7oU&t=640s
             </textarea>
           </section>
         </div>
