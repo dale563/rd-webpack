@@ -117,6 +117,7 @@
                 >
               </li>
             </ul>
+
           </section>
           <section>
             <h3>Son fonctionnement</h3>
@@ -141,6 +142,7 @@
           </section>
           <section>
             <h3>Qu'est-ce qu'on fait avec ça?</h3>
+
             <p>
               On se demande avec quoi part, comment on veut travailler entre les
               deux (environnement dev) et avec quoi on veut finir(dist/public).
@@ -148,6 +150,7 @@
             <p>
               Puis on construit notre environnement sur mesure avec webpack et
               ses super avantage.
+
             </p>
           </section>
           <section data-markdown>
@@ -159,8 +162,10 @@
                 3. Finalement, il est à cheval sur l'environnement Node.js;
             2. Choix des loaders et des plugins
                 1. Webpack est d'abord javascipt
+
           </textarea
             >
+
           </section>
           <section data-markdown>
             <textarea data-template>
@@ -171,13 +176,16 @@
             4. Va chercher les dépendances automatiquement;
             5. Permet aussi d'optimiser la performance et le temps de chargement;
             6. Il est plaisant à utiliser;
+
           </textarea
             >
+
           </section>
           <section>
             <h3>Sélection de Modules, loaders et plugins</h3>
           </section>
           <section>
+
             <h3>Selection - Webpack et Bable</h3>
             <table class="table table-dark table-hover">
               <thead>
@@ -412,6 +420,7 @@
                 </tr>
               </tbody>
             </table>
+
           </section>
           <section>
             <h3>Sélection - Aller plus loin</h3>
@@ -420,22 +429,27 @@
                 <tr>
                   <th scope="col">Nom</th>
                   <th scope="col">Utilité</th>
+
                   <th scope="col">Ressource</th>
+
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <th scope="row">webpack-easy-seo</th>
                   <td>Améliorer le SEO</td>
+
                   <td>
                     <a href="https://www.npmjs.com/package/webpack-easy-seo"
                       >npm</a
                     >
                   </td>
+
                 </tr>
                 <tr>
                   <th scope="row">Communauté webpack-contrib</th>
                   <td>Plusieurs repositories supportés par la communauté</td>
+
                   <td>
                     <a href="https://github.com/webpack-contrib"
                       ><i class="bi bi-github"></i
@@ -450,14 +464,17 @@
           <section>
             <h3>Entrons dans le code - branche config01</h3>
             <pre><code data-trim>
+
                 git checkout config01
                 npm install
                 npm run dev
               </code></pre>
+
           </section>
           <section>
             <h3>Regardons d'abord le fichier json</h3>
             <pre><code data-trim data-line-numbers="8-9|15-32|35">
+
                 {
                   "name": "rd-webpack",
                   "version": "1.0.0",
@@ -501,6 +518,7 @@
                   }
                 }
               </code></pre>
+
           </section>
           <section>
             <h3>Puis le fichier de configuration Webpack</h3>
@@ -510,10 +528,12 @@
           <section>
             <h3>Il y a d'autre manière de faire ... plus recommandée</h3>
             <pre>
+
                 <code data-trim>
                   git checkout config02
                 </code>
               </pre>
+
           </section>
         </section>
         <section>
@@ -523,6 +543,7 @@
               Aller sur la branche config02 pour accéder la cette section de la
               présentation
             </p>
+
             <pre><code data-trim>
               git checkout config02
               npm install
@@ -579,7 +600,9 @@
               <li>webpack.config.dev.js</li>
               <li>webpack.config.prod.js</li>
             </ul>
+
           </section>
+
           <section>
             <ul>
               <li>webpack.config.prod.js</li>
@@ -644,7 +667,9 @@
                 });
               </code>
             </pre>
+
           </section>
+
           <section>
             <ul>
               <li>webpack.config.commun.js</li>
@@ -727,9 +752,11 @@
           <section>
             <h3>Analyse et retour</h3>
             <ul>
+
               <li>
                 Pas évident de trouver l'information fonctionnelle sur webpack
               </li>
+
               <li>De base une structure js ou jsx</li>
               <li>
                 <ul>
@@ -745,8 +772,10 @@
             <h3>Quoi s'attendre pour la seconde présentation</h3>
             <ul>
               <li>Chunk (ex:vendor)</li>
+
               <li>
                 Optimisation
+
                 <ul>
                   <li>Tansformer les images en webp</li>
                   <li>Purger le CSS</li>
@@ -758,6 +787,7 @@
               <li>Des suggestions?</li>
             </ul>
           </section>
+
         </section>
         <section>
           <section>
@@ -858,6 +888,7 @@
             <p>Questions, commentaires?</p>
           </section>
         </section>
+
         <section data-markdown>
           <textarea data-template>
             ### Bibliographie:
@@ -872,7 +903,9 @@
           </textarea>
         </section>
       </div>
+
     </main>
     <footer></footer>
   </body>
 </html>
+
