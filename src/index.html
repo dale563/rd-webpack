@@ -1,35 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>Présentation</title>
-	</head>
-	<body>
+    <title>Présentation</title>
+  </head>
+  <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
-          <a class="navbar-brand" href="javascript:;"><h1>Présentation</h1></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="javascript:;">Webpack<span class="sr-only"></span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="page-en-construction.html">Cartes de chats</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <a class="navbar-brand" href="javascript:;"><h1>Présentation</h1></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="javascript:;"
+                >Webpack<span class="sr-only"></span
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="page-en-construction.html"
+                >Cartes de chats</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
-		<main class="reveal">
+    <main class="reveal">
       <div class="slides">
         <section>
           <section>
-            <img src="./assets/images/logo-on-dark-bg.png" alt="logo de webpack">
+            <img
+              src="./assets/images/logo-on-dark-bg.png"
+              alt="logo de webpack"
+            />
           </section>
           <section>
             <p>Avant tout, vous pouvez faire un clone de la présention</p>
@@ -54,7 +72,10 @@
           </section>
           <section>
             <h3>Pourquoi utiliser Webpack :</h3>
-            <blockquote>[Pour] faciliter le développement et la gestion de sites et d'applications web modernes.</blockquote>
+            <blockquote>
+              [Pour] faciliter le développement et la gestion de sites et
+              d'applications web modernes.
+            </blockquote>
             <ul>
               <li>Créer un environnement de travail</li>
               <li>C'est un outil puissant et malléable</li>
@@ -63,7 +84,10 @@
           </section>
           <section>
             <h3>Webpack est un module bundler</h3>
-            <img src="./assets/images/module-bundler.png" alt="logo de webpack">
+            <img
+              src="./assets/images/module-bundler.png"
+              alt="logo de webpack"
+            />
           </section>
           <section data-markdown>
             <textarea data-template>
@@ -73,7 +97,8 @@
             2. On entre dans le code - la structure du fichier de configuration:
                 1. Exploration et analyse de la première structure (branche config01);
                 2. Changement de branche - exploration de la seconde structure (branche config02);
-          </textarea>
+          </textarea
+            >
           </section>
           <section>
             <h3>Son histoire</h3>
@@ -85,8 +110,12 @@
               <li>ESM - ECMAScript standard</li>
               <li>Automatic Dependecy Collection</li>
               <li>Premier release en 2014 (wiki)</li>
-              <li>Source (reste): <a href="https://webpack.js.org/concepts/why-webpack/">Why Webpack</a></li>
-              
+              <li>
+                Source (reste):
+                <a href="https://webpack.js.org/concepts/why-webpack/"
+                  >Why Webpack</a
+                >
+              </li>
             </ul>
           </section>
           <section>
@@ -112,10 +141,13 @@
           </section>
           <section>
             <h3>Qu'est-ce qu'on fait avec ça?</h3>
-            <p> 
-            On se demande avec quoi part, comment on veut travailler entre les deux (environnement dev) et avec quoi on veut finir(dist/public).
-          </p><p>
-             Puis on construit notre environnement sur mesure avec webpack et ses super avantage.
+            <p>
+              On se demande avec quoi part, comment on veut travailler entre les
+              deux (environnement dev) et avec quoi on veut finir(dist/public).
+            </p>
+            <p>
+              Puis on construit notre environnement sur mesure avec webpack et
+              ses super avantage.
             </p>
           </section>
           <section data-markdown>
@@ -127,7 +159,8 @@
                 3. Finalement, il est à cheval sur l'environnement Node.js;
             2. Choix des loaders et des plugins
                 1. Webpack est d'abord javascipt
-          </textarea>
+          </textarea
+            >
           </section>
           <section data-markdown>
             <textarea data-template>
@@ -138,158 +171,204 @@
             4. Va chercher les dépendances automatiquement;
             5. Permet aussi d'optimiser la performance et le temps de chargement;
             6. Il est plaisant à utiliser;
-          </textarea>
+          </textarea
+            >
           </section>
           <section>
             <h3>Sélection de Modules, loaders et plugins</h3>
           </section>
           <section>
-              <h3>Selection - Webpack et Bable</h3>
-              <table class="table table-dark table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col">Nom</th>
-                    <th scope="col">Utilité</th>
-                    <th scope="col">Ressource</th> 
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">webpack</th>
-                    <td>Packter toute pour le web</td>
-                    <td><a href="https://github.com/babel/babel-loader"><i class="bi bi-github"></i></a><a href="https://webpack.js.org/"><i class="bi bi-link-45deg"></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">webpack-cli</th>
-                    <td>Communiquer en ligne de commande avec webpack</td>
-                    <td><a href="https://github.com/babel/babel-loader"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-link-45deg"></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">webpack-dev-server</th>
-                    <td>Rouler un environnement de développement</td>
-                    <td><a href="https://github.com/babel/babel-loader"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-link-45deg"></i></a></td>
-                  </tr>
-                  
-                </tbody>
-              </table>
+            <h3>Selection - Webpack et Bable</h3>
+            <table class="table table-dark table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Nom</th>
+                  <th scope="col">Utilité</th>
+                  <th scope="col">Ressource</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">webpack</th>
+                  <td>Packter toute pour le web</td>
+                  <td>
+                    <a href="https://github.com/babel/babel-loader"
+                      ><i class="bi bi-github"></i></a
+                    ><a href="https://webpack.js.org/"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">webpack-cli</th>
+                  <td>Communiquer en ligne de commande avec webpack</td>
+                  <td>
+                    <a href="https://github.com/babel/babel-loader"
+                      ><i class="bi bi-github"></i></a
+                    ><a href="#"><i class="bi bi-link-45deg"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">webpack-dev-server</th>
+                  <td>Rouler un environnement de développement</td>
+                  <td>
+                    <a href="https://github.com/babel/babel-loader"
+                      ><i class="bi bi-github"></i></a
+                    ><a href="#"><i class="bi bi-link-45deg"></i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </section>
           <section>
-              <h3>Sélection - Webpack et Babel</h3>
-              <table class="table table-dark table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col">Nom</th>
-                    <th scope="col">Utilité</th>
-                    <th scope="col">Ressource</th> 
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">webpack-merge</th>
-                    <td>Joindre plusieurs fichiers de configuraitons ensemble</td>
-                    <td><a href="https://github.com/babel/babel-loader"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-link-45deg"></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">babel-loader</th>
-                    <td>compatibilité</td>
-                    <td><a href="https://www.npmjs.com/package/babel-loader">npm</a><a href="https://github.com/babel/babel-loader"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-link-45deg"></i></a></td>
-                  </tr>                    
-                </tbody>
-              </table>
+            <h3>Sélection - Webpack et Babel</h3>
+            <table class="table table-dark table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Nom</th>
+                  <th scope="col">Utilité</th>
+                  <th scope="col">Ressource</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">webpack-merge</th>
+                  <td>Joindre plusieurs fichiers de configuraitons ensemble</td>
+                  <td>
+                    <a href="https://github.com/babel/babel-loader"
+                      ><i class="bi bi-github"></i></a
+                    ><a href="#"><i class="bi bi-link-45deg"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">babel-loader</th>
+                  <td>compatibilité</td>
+                  <td>
+                    <a href="https://www.npmjs.com/package/babel-loader">npm</a
+                    ><a href="https://github.com/babel/babel-loader"
+                      ><i class="bi bi-github"></i></a
+                    ><a href="#"><i class="bi bi-link-45deg"></i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </section>
           <section>
-              <h3>Sélection - Styles</h3>
-              <table class="table table-dark table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col">Nom</th>
-                    <th scope="col">Utilité</th>
-                    <th scope="col">Ressource</th> 
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">node-sass</th>
-                    <td>Requis pour le sass-loader</td>
-                    <td><a href="https://www.npmjs.com/package/node-sass">npm</a><a href="https://github.com/sass/node-sass"><i class="bi bi-github"></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">sass-loader</th>
-                    <td>Converti le sass en css</td>
-                    <td><a href="https://www.npmjs.com/package/sass-loader"></a><a href="https://github.com/webpack-contrib/sass-loader"><i class="bi bi-github"></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">css-loader</th>
-                    <td>Lire le CSS</td>
-                    <td><a href="https://www.npmjs.com/package/css-loader">npm</a><a href="https://github.com/webpack-contrib/css-loader"><i class="bi bi-github"></i></a><a href="https://webpack.js.org/loaders/css-loader/"><i class="bi bi-link-45deg"></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">mini-css-extract-plugin</th>
-                    <td>Créer et gérer des fichiers CSS</td>
-                    <td><a href="https://webpack.js.org/plugins/mini-css-extract-plugin/">npm</a><a href="https://github.com/webpack-contrib/mini-css-extract-plugin"><i class="bi bi-github"></i></a><a href="https://webpack.js.org/plugins/mini-css-extract-plugin/"><i class="bi bi-link-45deg"></i></a></td>
-                  </tr> 
-                </tbody>
-              </table>
+            <h3>Sélection - Styles</h3>
+            <table class="table table-dark table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Nom</th>
+                  <th scope="col">Utilité</th>
+                  <th scope="col">Ressource</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">node-sass</th>
+                  <td>Requis pour le sass-loader</td>
+                  <td>
+                    <a href="https://www.npmjs.com/package/node-sass">npm</a
+                    ><a href="https://github.com/sass/node-sass"
+                      ><i class="bi bi-github"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">sass-loader</th>
+                  <td>Converti le sass en css</td>
+                  <td>
+                    <a href="https://www.npmjs.com/package/sass-loader"></a
+                    ><a href="https://github.com/webpack-contrib/sass-loader"
+                      ><i class="bi bi-github"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">css-loader</th>
+                  <td>Lire le CSS</td>
+                  <td>
+                    <a href="https://www.npmjs.com/package/css-loader">npm</a
+                    ><a href="https://github.com/webpack-contrib/css-loader"
+                      ><i class="bi bi-github"></i></a
+                    ><a href="https://webpack.js.org/loaders/css-loader/"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">mini-css-extract-plugin</th>
+                  <td>Créer et gérer des fichiers CSS</td>
+                  <td>
+                    <a
+                      href="https://webpack.js.org/plugins/mini-css-extract-plugin/"
+                      >npm</a
+                    ><a
+                      href="https://github.com/webpack-contrib/mini-css-extract-plugin"
+                      ><i class="bi bi-github"></i></a
+                    ><a
+                      href="https://webpack.js.org/plugins/mini-css-extract-plugin/"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </section>
           <section>
-              <h3>Sélection - HTML et autre</h3>
-              <table class="table table-dark table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col">Nom</th>
-                    <th scope="col">Utilité</th>
-                    <th scope="col">Ressource</th> 
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">html-loader</th>
-                    <td>Lire le code HTML</td>
-                    <td><a href="https://www.npmjs.com/package/html-loader">npm</a><a href="https://github.com/webpack-contrib/html-loader"><i class="bi bi-github"></i></a><a href="https://webpack.js.org/loaders/html-loader/"><i class="bi bi-link-45deg"></i></a>
-                     
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">html-webpack-plugin</th>
-                    <td>Interagir avec le code html - plus d'option que html-loader</td>
-                    <td><a href="https://www.npmjs.com/package/html-webpack-plugin">npm</a><a href="https://github.com/jantimon/html-webpack-plugin"><i class="bi bi-github"></i></a><a href="https://webpack.js.org/plugins/html-webpack-plugin/"><i class="bi bi-link-45deg"></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">copy-webpack-plugin</th>
-                    <td>Copiers les éléments qui contourne le "dependencies graph de Webpack"</td>
-                    <td><a href="https://github.com/webpack-contrib/copy-webpack-plugin"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-link-45deg"></i></a></td>
-                  </tr>
-                </tbody>
-              </table>
-          </section>
-          <section>
-              <h3>Sélection - Aller plus loin</h3>
-              <table class="table table-dark table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col">Nom</th>
-                    <th scope="col">Utilité</th>
-                    <th scope="col">Ressource</th> 
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">export-loader</th>
-                    <td>Exporter les modules en les important...</td>
-                    <td><a href="https://github.com/babel/babel-loader"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-link-45deg"></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">imagemin-webp-webpack-plugin</th>
-                    <td>Convertir les images en format webp</td>
-                    <td><a href="https://www.npmjs.com/package/imagemin-webp-webpack-plugin">npm</a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">purge-css-webpack-plugin</th>
-                    <td>Enlever le CSS non utilisé</td>
-                    <td><a href="https://www.npmjs.com/package/purgecss-webpack-plugin">npm</a></td>
-                  </tr>
-                </tbody>
-              </table>
+            <h3>Sélection - HTML et autre</h3>
+            <table class="table table-dark table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Nom</th>
+                  <th scope="col">Utilité</th>
+                  <th scope="col">Ressource</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">html-loader</th>
+                  <td>Lire le code HTML</td>
+                  <td>
+                    <a href="https://www.npmjs.com/package/html-loader">npm</a
+                    ><a href="https://github.com/webpack-contrib/html-loader"
+                      ><i class="bi bi-github"></i></a
+                    ><a href="https://webpack.js.org/loaders/html-loader/"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">html-webpack-plugin</th>
+                  <td>
+                    Interagir avec le code html - plus d'option que html-loader
+                  </td>
+                  <td>
+                    <a href="https://www.npmjs.com/package/html-webpack-plugin"
+                      >npm</a
+                    ><a href="https://github.com/jantimon/html-webpack-plugin"
+                      ><i class="bi bi-github"></i></a
+                    ><a
+                      href="https://webpack.js.org/plugins/html-webpack-plugin/"
+                      ><i class="bi bi-link-45deg"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">copy-webpack-plugin</th>
+                  <td>
+                    Copiers les éléments qui contourne le "dependencies graph de
+                    Webpack"
+                  </td>
+                  <td>
+                    <a
+                      href="https://github.com/webpack-contrib/copy-webpack-plugin"
+                      ><i class="bi bi-github"></i></a
+                    ><a href="#"><i class="bi bi-link-45deg"></i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </section>
           <section>
             <h3>Sélection - Aller plus loin</h3>
@@ -298,37 +377,87 @@
                 <tr>
                   <th scope="col">Nom</th>
                   <th scope="col">Utilité</th>
-                  <th scope="col">Ressource</th> 
+                  <th scope="col">Ressource</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">export-loader</th>
+                  <td>Exporter les modules en les important...</td>
+                  <td>
+                    <a href="https://github.com/babel/babel-loader"
+                      ><i class="bi bi-github"></i></a
+                    ><a href="#"><i class="bi bi-link-45deg"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">imagemin-webp-webpack-plugin</th>
+                  <td>Convertir les images en format webp</td>
+                  <td>
+                    <a
+                      href="https://www.npmjs.com/package/imagemin-webp-webpack-plugin"
+                      >npm</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">purge-css-webpack-plugin</th>
+                  <td>Enlever le CSS non utilisé</td>
+                  <td>
+                    <a
+                      href="https://www.npmjs.com/package/purgecss-webpack-plugin"
+                      >npm</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section>
+            <h3>Sélection - Aller plus loin</h3>
+            <table class="table table-dark table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Nom</th>
+                  <th scope="col">Utilité</th>
+                  <th scope="col">Ressource</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <th scope="row">webpack-easy-seo</th>
                   <td>Améliorer le SEO</td>
-                  <td><a href="https://www.npmjs.com/package/webpack-easy-seo">npm</a></td>
+                  <td>
+                    <a href="https://www.npmjs.com/package/webpack-easy-seo"
+                      >npm</a
+                    >
+                  </td>
                 </tr>
                 <tr>
                   <th scope="row">Communauté webpack-contrib</th>
                   <td>Plusieurs repositories supportés par la communauté</td>
-                  <td><a href="https://github.com/webpack-contrib"><i class="bi bi-github"></i></a></td>
+                  <td>
+                    <a href="https://github.com/webpack-contrib"
+                      ><i class="bi bi-github"></i
+                    ></a>
+                  </td>
                 </tr>
               </tbody>
             </table>
-        </section>
+          </section>
         </section>
         <section>
-          
-            <section>
-              <h3>Entrons dans le code - branche config01</h3>
-              <pre><code data-trim>
+          <section>
+            <h3>Entrons dans le code - branche config01</h3>
+            <pre><code data-trim>
                 git checkout config01
                 npm install
                 npm run dev
               </code></pre>
-            </section>
-            <section>
-              <h3>Regardons d'abord le fichier json</h3>
-              <pre><code data-trim data-line-numbers="8-9|15-32|35">
+          </section>
+          <section>
+            <h3>Regardons d'abord le fichier json</h3>
+            <pre><code data-trim data-line-numbers="8-9|15-32|35">
                 {
                   "name": "rd-webpack",
                   "version": "1.0.0",
@@ -372,29 +501,28 @@
                   }
                 }
               </code></pre>
-            </section>
-            <section>
-              <h3>Puis le fichier de configuration Webpack</h3>
-              <p>
-                  Voir le fichier webpack.config.js
-              </p>
-              <p>
-                  Et regardons la structure de dossier en examinant le fichier
-              </p>
-            </section> 
-            <section>
-              <h3>Il y a d'autre manière de faire ... plus recommandée</h3>
-              <pre>
+          </section>
+          <section>
+            <h3>Puis le fichier de configuration Webpack</h3>
+            <p>Voir le fichier webpack.config.js</p>
+            <p>Et regardons la structure de dossier en examinant le fichier</p>
+          </section>
+          <section>
+            <h3>Il y a d'autre manière de faire ... plus recommandée</h3>
+            <pre>
                 <code data-trim>
                   git checkout config02
                 </code>
               </pre>
-            </section> 
-        </section> 
+          </section>
+        </section>
         <section>
           <section>
             <h3>Seconde configuration</h3>
-            <p>Aller sur la branche config02 pour accéder la cette section de la présentation</p>
+            <p>
+              Aller sur la branche config02 pour accéder la cette section de la
+              présentation
+            </p>
             <pre><code data-trim>
               git checkout config02
               npm install
@@ -451,7 +579,7 @@
               <li>webpack.config.dev.js</li>
               <li>webpack.config.prod.js</li>
             </ul>
-          </section> 
+          </section>
           <section>
             <ul>
               <li>webpack.config.prod.js</li>
@@ -516,7 +644,7 @@
                 });
               </code>
             </pre>
-          </section> 
+          </section>
           <section>
             <ul>
               <li>webpack.config.commun.js</li>
@@ -599,7 +727,9 @@
           <section>
             <h3>Analyse et retour</h3>
             <ul>
-              <li>Pas évident de trouver l'information fonctionnelle sur webpack</li>
+              <li>
+                Pas évident de trouver l'information fonctionnelle sur webpack
+              </li>
               <li>De base une structure js ou jsx</li>
               <li>
                 <ul>
@@ -615,7 +745,8 @@
             <h3>Quoi s'attendre pour la seconde présentation</h3>
             <ul>
               <li>Chunk (ex:vendor)</li>
-              <li>Optimisation
+              <li>
+                Optimisation
                 <ul>
                   <li>Tansformer les images en webp</li>
                   <li>Purger le CSS</li>
@@ -627,11 +758,98 @@
               <li>Des suggestions?</li>
             </ul>
           </section>
+        </section>
+        <section>
+          <section>
+            <h3>Seconde présentation</h3>
+            <ol>
+              Au menu
+              <li>Préparer le dossier pour l'exercice</li>
+              <li>Astuces</li>
+              <li>Refaire les fichiers de configuration</li>
+              <li>Optimisation des images</li>
+              <li>Optimisation du CSS</li>
+              <li>Optimisation du Javascript</li>
+              <li>Présentation des autres fonctionnalités</li>
+            </ol>
+          </section>
+          <section>
+            <p>Avant tout, vous pouvez faire un clone de la présention</p>
+            <pre>
+                <code data-trim>
+                  git clone https://github.com/dale563/rd-webpack.git
+                </code>
+              </pre>
+            <p>Ensuite entrez dans le dossier et lancer l'installation:</p>
+            <pre>
+                <code data-trim>
+                  npm install
+                </code>
+              </pre>
+            <p>Finalement, lancer le serveur de développement :</p>
+            <pre>
+                <code data-trim>
+                  npm run dev
+                </code>
+              </pre>
+            <p>Vous devriez ainsi avoir la même présentation que moi.</p>
+          </section>
+          <section>
+            <h3>Astuces</h3>
+            <ul>
+              <li>Gestion des branches dans VS Code</li>
+              <li>nodemon -w si désiré</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Refaire les fichiers de configuration</h3>
+            <ul>
+              <li>Branche: presentation02-00</li>
+              <li>git checkout presentation02-00</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Optimisations des images</h3>
+            <ul>
+              <li>Branche: presentation02-01</li>
+              <li>git checkout presentation02-01</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Optimiser le CSS</h3>
+            <ul>
+              <li>Branche: presentation02-02</li>
+              <li>git checkout presentation02-02</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Autres fonctionnalités</h3>
+            <ul>
+              <li>
+                <a target="_blank" href="https://survivejs.com/webpack/foreword/">
+                  Livre pour aller plus loin
+                </a>
+              </li>
+              <li>Purge CSS</li>
+              <li>Autoprefixing</li>
+              <li>
+                <a
+                  href="https://survivejs.com/webpack/loading/javascript/#generating-differential-builds"
+                >
+                  switch ES6 et Legacy
+                </a>
+              </li>
+              <li>Tree shaking</li>
+              <li>Module Federation</li>
+              <li>Server Side Rendering</li>
+              <li>Et plus ...</li>
+            </ul>
+          </section>
           <section>
             <h3>FIN</h3>
-            <p>Questions, commentaires injures?</p>
+            <p>Questions, commentaires?</p>
           </section>
-        </section>       
+        </section>
         <section data-markdown>
           <textarea data-template>
             ### Bibliographie:
@@ -646,9 +864,7 @@
           </textarea>
         </section>
       </div>
-  </main>
-    <footer>
-      
-    </footer>
-	</body>
+    </main>
+    <footer></footer>
+  </body>
 </html>
