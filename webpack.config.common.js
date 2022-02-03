@@ -1,6 +1,8 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const glob = require("glob");
+const PurgeCSSPlugin = require("purgecss-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -14,7 +16,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, "public"),
-    assetModuleFilename: "assets/[name][ext][query]",
+    assetModuleFilename: "assets/[name][ext]",
     clean: true,
   },
   plugins: [
@@ -27,6 +29,18 @@ module.exports = {
       filename: "page-en-construction.html",
       template: path.resolve(__dirname, "src/page-en-construction.html"),
       chunks: ["main", "pageconstruction"],
+    }),
+    new PurgeCSSPlugin({
+      // paths: glob.sync(path.join(__dirname, "src/**/*"),  { nodir: true }),
+      paths: glob.sync(path.join(__dirname, "src/**/*.*")), // Consider extracting as a parameter
+      only: ["main"],
+      //   extractors: [
+      //     {
+      //       extractor: (content) =>
+      //         content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [],
+      //       extensions: ["html"],
+      //     },
+      //   ],
     }),
   ],
   module: {
@@ -55,7 +69,7 @@ module.exports = {
           loader: "image-webpack-loader",
           options: {
             mozjpeg: {
-            //   quality:20,
+              //   quality:20,
               progressive: true,
             },
             // optipng.enabled: false will disable optipng
@@ -85,7 +99,17 @@ module.exports = {
       },
       {
         test: /\.(scss|css)$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: { plugins: [require("autoprefixer")()] },
+            },
+          },
+          "sass-loader",
+        ],
       },
     ],
   },
