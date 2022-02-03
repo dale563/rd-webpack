@@ -3,6 +3,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const glob = require("glob");
 const PurgeCSSPlugin = require("purgecss-webpack-plugin");
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -41,6 +42,10 @@ module.exports = {
       //       extensions: ["html"],
       //     },
       //   ],
+    }),
+    new webpack.optimize.AggressiveSplittingPlugin({ //déprécier, voir https://webpack.js.org/plugins/split-chunks-plugin/
+      minSize: 10000,
+      maxSize: 30000,
     }),
   ],
   module: {
