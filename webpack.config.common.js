@@ -32,18 +32,10 @@ module.exports = {
       chunks: ["main", "pageconstruction"],
     }),
     new PurgeCSSPlugin({
-      // paths: glob.sync(path.join(__dirname, "src/**/*"),  { nodir: true }),
-      paths: glob.sync(path.join(__dirname, "src/**/*.*")), // Consider extracting as a parameter
+      paths: glob.sync(path.join(__dirname, "src/**/*.*")),
       only: ["main"],
-      //   extractors: [
-      //     {
-      //       extractor: (content) =>
-      //         content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [],
-      //       extensions: ["html"],
-      //     },
-      //   ],
     }),
-    new webpack.optimize.AggressiveSplittingPlugin({ //déprécier, voir https://webpack.js.org/plugins/split-chunks-plugin/
+    new webpack.optimize.AggressiveSplittingPlugin({
       minSize: 10000,
       maxSize: 30000,
     }),
@@ -74,10 +66,8 @@ module.exports = {
           loader: "image-webpack-loader",
           options: {
             mozjpeg: {
-              //   quality:20,
               progressive: true,
             },
-            // optipng.enabled: false will disable optipng
             optipng: {
               enabled: false,
             },
@@ -88,10 +78,6 @@ module.exports = {
             gifsicle: {
               interlaced: false,
             },
-            // the webp option will enable WEBP
-            // webp: {
-            //   quality: 75,
-            // },
           },
         },
       },
